@@ -1,0 +1,16 @@
+.idea/
+.idea/inspectionProfiles/
+.idea/workspace.xml
+lib/
+out/
+scripts/
+src/
+target/
+test/functional/Config.groovy
+web-app/META-INF/
+web-app/css/
+web-app/images/
+web-app/js/
+wrapper/
+
+

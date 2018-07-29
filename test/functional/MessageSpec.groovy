@@ -23,7 +23,6 @@ class MessageSpec extends GebSpec{
     final String CONTACTED_TEXT = "contacted"
     final int LIST_SIZE = 21
 
-
     String username
     String password
 

@@ -8,8 +8,6 @@ import pages.MessagePage
 import pages.MyAccountPage
 import pages.MyMessagesPage
 import pages.SearchPage
-
-
 import java.util.logging.Level
 import java.util.logging.Logger
 

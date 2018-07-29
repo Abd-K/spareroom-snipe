@@ -8,7 +8,6 @@ import pages.MessagePage
 import pages.MyAccountPage
 import pages.MyMessagesPage
 import pages.SearchPage
-import grails.util.Holders
 
 
 import java.util.logging.Level
@@ -52,7 +51,7 @@ class MessageSpec extends GebSpec{
                 waitFor { at MyAccountPage}
             }
             MyMessagesPage myMessagesPage = to MyMessagesPage
-            loopThroughMessagesListAndSend(myMessagesPage)
+//            loopThroughMessagesListAndSend(myMessagesPage)
         then:
             true
     }

@@ -52,7 +52,7 @@ class MessageSpec extends GebSpec{
                 waitFor { at MyAccountPage}
             }
             MyMessagesPage myMessagesPage = to MyMessagesPage
-//            loopThroughMessagesListAndSend(myMessagesPage)
+            loopThroughMessagesListAndSend(myMessagesPage)
         then:
             true
     }

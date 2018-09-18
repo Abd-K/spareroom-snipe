@@ -1,6 +1,7 @@
 import geb.error.RequiredPageContentNotPresent
 import geb.spock.GebSpec
 import org.codehaus.groovy.grails.commons.DefaultGrailsApplication
+import org.junit.Ignore
 import pages.AdPage
 import pages.ConfirmationPage
 import pages.HomePage
@@ -26,7 +27,7 @@ class MessageSpec extends GebSpec{
 
     Logger logger = Logger.getLogger("")
 
-    final String MAIN_SEARCH_PAGE_HEADER_TITLE = "Flatmates in SE8 from £675 up to £1100"
+    final String MAIN_SEARCH_PAGE_HEADER_TITLE = "Flatmates in SE8 from £675 up to £900"
 
     final String EARLY_BIRD_INTEREST_SUCCESS = "Your interest has been sent to the advertiser, and the advert saved to your 'saved ads'"
     final String MESSAGE_SUCCESS = "Thank you - your email has been sent. Please be patient when waiting for a response."
@@ -36,6 +37,7 @@ class MessageSpec extends GebSpec{
         password = grailsApplication.config.password
     }
 
+    @Ignore
     def "remessage corect price"() {
         when:
             try {

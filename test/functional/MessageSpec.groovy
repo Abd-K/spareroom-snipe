@@ -38,42 +38,22 @@ class MessageSpec extends GebSpec{
     }
 
     @Ignore
-    def "remessage corect price"() {
-        when:
-            try {
-                HomePage homePage = to HomePage
-                doLogin(homePage)
-                waitFor { at MyAccountPage}
-            } catch(Exception e) {
-                HomePage homePage = to HomePage
-                doLogin(homePage)
-                waitFor { at MyAccountPage}
-            }
-            MyMessagesPage myMessagesPage = to MyMessagesPage
-//            loopThroughMessagesListAndSend(myMessagesPage)
-        then:
-            true
-    }
-
-    def loopThroughMessagesListAndSend(MyMessagesPage myMessagesPage) {
-        1.upto(1) { it ->
-            String message = "Hi again, " +
-                    "\nSorry the room that's available is for £675 and not £800!\n" +
-                    "\nAnna"
-            myMessagesPage.sentMessage(it).click()
-            waitFor { myMessagesPage.manualReply.isDisplayed()}
-            try{myMessagesPage.manualReply.isDisplayed()
-                myMessagesPage.manualReply.click()
-                waitFor {myMessagesPage.sendButton.isDisplayed()}
-                myMessagesPage.textArea.value(message)
-                myMessagesPage.sendButton.isDisplayed()
-                myMessagesPage.sendButton.click()
-            } catch(RequiredPageContentNotPresent e) {}
-
-            to myMessagesPage
-
-        }
-    }
+//    def "remessage corect price"() {
+//        when:
+//            try {
+//                HomePage homePage = to HomePage
+//                doLogin(homePage)
+//                waitFor { at MyAccountPage}
+//            } catch(Exception e) {
+//                HomePage homePage = to HomePage
+//                doLogin(homePage)
+//                waitFor { at MyAccountPage}
+//            }
+//            MyMessagesPage myMessagesPage = to MyMessagesPage
+////            loopThroughMessagesListAndSend(myMessagesPage)
+//        then:
+//            true
+//    }
 
     def "go to present search page" () {
         given:
@@ -191,6 +171,26 @@ class MessageSpec extends GebSpec{
                 searchPage.nextButton.click()
                 loopThroughItemsInPage(LIST_SIZE, searchPage, pageIndex)
             }
+        }
+    }
+
+    def loopThroughMessagesListAndSend(MyMessagesPage myMessagesPage) {
+        1.upto(1) { it ->
+            String message = "Hi again, " +
+                    "\nSorry the room that's available is for £675 and not £800!\n" +
+                    "\nAnna"
+            myMessagesPage.sentMessage(it).click()
+            waitFor { myMessagesPage.manualReply.isDisplayed()}
+            try{myMessagesPage.manualReply.isDisplayed()
+                myMessagesPage.manualReply.click()
+                waitFor {myMessagesPage.sendButton.isDisplayed()}
+                myMessagesPage.textArea.value(message)
+                myMessagesPage.sendButton.isDisplayed()
+                myMessagesPage.sendButton.click()
+            } catch(RequiredPageContentNotPresent e) {}
+
+            to myMessagesPage
+
         }
     }
 

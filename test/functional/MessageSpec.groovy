@@ -105,14 +105,15 @@ class MessageSpec extends GebSpec{
 
                             String name = messagePage.personName.text().trim().split(" ")[0]
                             String messageText = "Hi $name," +
-                                    "\nWe are a couple looking for someone to share with us our 2 bedroom flat, from the 1st of November\n" +
+                                    "\nWe are a couple looking for someone to share with us our 2 bedroom flat, available from the 10th of November\n" +
                                     "It’s ideal if you’re looking to move somewhere that’s not overcrowded, yet pay a low rent.\n" +
                                     "\n" +
                                     "The room is a spacious double room, it’s very close to Surrey quays + Canada Water station and Tesco/Lidl and shopping center.\n" +
                                     "\n" +
                                     "We have a small cat living with us, I hope you like cats, if you do, please get in touch!\n" +
                                     "\n" +
-                                    "Please checkout my ad if you’re interested, and we can arrange a viewing soon.\n" +
+                                    "Please checkout my ad if you’re interested: https://www.spareroom.co.uk/flatshare/london/surrey_quays/10428148\n" +
+                                    "feel free to contact me on 07503151156 and we can arrange a viewing whenever suitable for you.\n" +
                                     "\n" +
                                     "Thanks,\n" +
                                     "Anna "

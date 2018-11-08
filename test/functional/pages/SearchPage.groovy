@@ -1,7 +1,11 @@
 package pages
 
 class SearchPage extends GrailsPage {
-    static url = "https://www.spareroom.co.uk/flatmate/flatmates.pl?search_id=723174148&"
+    static url = "https://www.spareroom.co.uk/flatmate/flatmates.pl?search_id=740251549&"
+
+    public static void main(String[] args) {
+
+    }
     static content = {
         mainHeaderTitle {$("#mainheader")}
         adContactAvailabilityField (required: false) { nthChild -> $("ul.listing-results li:not([id]).listing-result:nth-child($nthChild) footer.status_container > span:nth-child(1) > span")}
